@@ -11,15 +11,17 @@ from typing import Any, Dict, List, Tuple
 
 from lark import Lark, Transformer, Token, Tree, UnexpectedInput
 
-from grammar import make_parser
-from ast_nodes import (
+from .grammar import make_parser
+from .ast_nodes import (
     Program,
     CreateInstruction,
     MoveInstruction,
     RotateInstruction,
     Instruction,
 )
-from errors import DslParseError
+from .errors import DslParseError
+
+
 
 
 class ASTBuilder(Transformer):
